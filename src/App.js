@@ -5,7 +5,29 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      generalInfo: {
+        name: "",
+        email: "",
+        phone: "",
+      },
+      schools: [
+        {
+          schoolName: "",
+          fieldOfStudy: "",
+          dateOfGraduation: "",
+        },
+      ],
+      experience: [
+        {
+          companyName: "",
+          positionTitle: "",
+          tasks: "",
+          startDate: "",
+          endDate: "",
+        },
+      ],
+    };
   }
 
   render() {
