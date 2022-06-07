@@ -6,7 +6,19 @@ class EducationInfo extends Component {
     super(props);
   }
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <h2>Education</h2>
+        <form>
+          <label>School Name: </label>
+          <input type="text"></input>
+          <label>Field of Study: </label>
+          <input type="text"></input>
+          <label>Date of Graduation: </label>
+          <input type="date"></input>
+        </form>
+      </div>
+    );
   }
 }
 
