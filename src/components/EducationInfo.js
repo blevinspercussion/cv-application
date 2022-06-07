@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import App from "../App";
+import "./component_styles.css";
 
 class EducationInfo extends Component {
   constructor(props) {
@@ -7,7 +7,7 @@ class EducationInfo extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="component education-info">
         <h2>Education</h2>
         <form>
           <label>School Name: </label>

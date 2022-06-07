@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import App from "../App";
+import "./component_styles.css";
 
 class GeneralInfo extends Component {
   constructor(props) {
@@ -7,7 +7,7 @@ class GeneralInfo extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="component contact-info">
         <h2>Contact Information</h2>
         <form>
           <label>Name: </label>
