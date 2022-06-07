@@ -1,4 +1,5 @@
 .App {
+  display: flex;
   text-align: center;
 }
 
@@ -40,4 +41,17 @@
 body {
   color: white;
   background-color: #000000;
+}
+
+.main-div {
+  display: flex;
+}
+
+.cv-input {
+  width: 45vh;
+  align-items: flex-start;
+}
+
+.cv-output {
+  width: 45vh;
 }

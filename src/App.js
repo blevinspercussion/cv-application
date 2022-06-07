@@ -15,31 +15,34 @@ class App extends Component {
         phone: "",
       },
       schools: [
-        {
-          schoolName: "",
-          fieldOfStudy: "",
-          dateOfGraduation: "",
-        },
+        // {
+        //   schoolName: "",
+        //   fieldOfStudy: "",
+        //   dateOfGraduation: "",
+        // },
       ],
       experience: [
-        {
-          companyName: "",
-          positionTitle: "",
-          tasks: "",
-          startDate: "",
-          endDate: "",
-        },
+        // {
+        //   companyName: "",
+        //   positionTitle: "",
+        //   tasks: "",
+        //   startDate: "",
+        //   endDate: "",
+        // },
       ],
     };
   }
 
   render() {
     return (
-      <div>
-        <h1>CV Maker App</h1>
-        <GeneralInfo />
-        <EducationInfo />
-        <ExperienceInfo />
+      <div className="main-div">
+        {/* <h1>CV Maker</h1> */}
+        <div className="cv-input">
+          <GeneralInfo />
+          <EducationInfo />
+          <ExperienceInfo />
+        </div>
+        <div className="cv-output"></div>
       </div>
     );
   }
