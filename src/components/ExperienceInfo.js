@@ -4,6 +4,14 @@ import "./component_styles.css";
 class ExperienceInfo extends Component {
   constructor(props) {
     super(props);
+
+    function workExperience(companyName, positionTitle, tasks, startDate, endDate) {
+      return (companyName, positionTitle, tasks, startDate, endDate);
+    };
+
+    this.state = {
+      workExperience: [],
+    };
   }
   render() {
     return (

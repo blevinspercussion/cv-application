@@ -4,6 +4,14 @@ import "./component_styles.css";
 class EducationInfo extends Component {
   constructor(props) {
     super(props);
+
+    function school(schoolName, fieldOfStudy, dateOfGraduation) {
+      return(schoolName, fieldOfStudy, dateOfGraduation);
+    }
+
+    this.state = { 
+      schools: [],
+     };
   }
   render() {
     return (
