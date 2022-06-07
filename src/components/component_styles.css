@@ -1,9 +1,35 @@
 .component {
+    display: flex;
+    flex-direction: column;
+    color: white;
     border: 1px solid black;
     padding: 15px;
-    margin: 10px
+    margin: 10px;
+    width: 65vw;
+    border-radius: 10px;
 }
 
 label {
     padding: 15px;
+}
+
+.general-info {
+    background-color: #2f4454;
+}
+
+.education-info {
+    background-color: #376e6f;
+}
+
+.experience-info {
+    background-color: #1c3334;
+}
+
+input {
+    max-width: 500px;
+}
+
+textarea {
+    resize: none;
+    width: 500px;
 }

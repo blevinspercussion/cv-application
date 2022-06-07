@@ -7,7 +7,7 @@ class GeneralInfo extends Component {
   }
   render() {
     return (
-      <div className="component contact-info">
+      <div className="component general-info">
         <h2>Contact Information</h2>
         <form>
           <label>Name: </label>

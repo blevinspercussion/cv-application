@@ -14,7 +14,7 @@ class ExperienceInfo extends Component {
         <label>Position/Title: </label>
         <input type="text"></input>
         <label>Tasks: </label>
-        <textarea></textarea>
+        <textarea rows="5"></textarea>
         <label>Start Date: </label>
         <input type="date"></input>
         <label>End date: </label>
