@@ -16,6 +16,7 @@ class GeneralInfo extends Component {
           <input type="email"></input>
           <label>Phone: </label>
           <input type="tel"></input>
+          <input className="btn-submit" type="submit" value="Submit" />
         </form>
       </div>
     );

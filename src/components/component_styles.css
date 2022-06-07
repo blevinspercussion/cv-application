@@ -33,3 +33,19 @@ textarea {
     resize: none;
     width: 500px;
 }
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-info form {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 100px;
+}
+
+.btn-submit {
+    margin: 15px;
+}

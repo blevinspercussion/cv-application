@@ -16,6 +16,7 @@ class EducationInfo extends Component {
           <input type="text"></input>
           <label>Date of Graduation: </label>
           <input type="date"></input>
+          <input className="btn-submit" type="submit" value="Submit" />
         </form>
       </div>
     );
