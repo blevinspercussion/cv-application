@@ -6,12 +6,8 @@ class EducationInfo extends Component {
     super(props);
 
     function school(schoolName, fieldOfStudy, dateOfGraduation) {
-      return(schoolName, fieldOfStudy, dateOfGraduation);
+      return schoolName, fieldOfStudy, dateOfGraduation;
     }
-
-    this.state = { 
-      schools: [],
-     };
   }
   render() {
     return (

@@ -5,12 +5,6 @@ class GeneralInfo extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      name: '',
-      email: '',
-      phone: '',
-    };
-
     this.saveInput = this.saveInput.bind(this);
     this.updateUI = this.updateUI.bind(this);
   }

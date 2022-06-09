@@ -5,13 +5,15 @@ class ExperienceInfo extends Component {
   constructor(props) {
     super(props);
 
-    function workExperience(companyName, positionTitle, tasks, startDate, endDate) {
-      return (companyName, positionTitle, tasks, startDate, endDate);
-    };
-
-    this.state = {
-      workExperience: [],
-    };
+    function workExperience(
+      companyName,
+      positionTitle,
+      tasks,
+      startDate,
+      endDate
+    ) {
+      return companyName, positionTitle, tasks, startDate, endDate;
+    }
   }
   render() {
     return (
