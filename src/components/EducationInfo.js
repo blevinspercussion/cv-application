@@ -58,10 +58,12 @@ class EducationInfo extends Component {
   // };
 
   handleSubmit = (e) => {
+    let { school, schools } = this.state;
+    schools.push(school);
+    this.handleSchoolName(e);
+    this.handleFieldOfStudy(e);
+    this.handleDateOfGraduation(e);
     e.preventDefault();
-    console.log(this.state.school.schoolName);
-    console.log(this.state.school.fieldOfStudy);
-    console.log(this.state.school.dateOfGraduation);
   };
 
   render() {
@@ -73,25 +75,31 @@ class EducationInfo extends Component {
           <input
             type="text"
             name="schoolName"
+            required="true"
             onChange={this.handleSchoolName}
           ></input>
           <label>Field of Study: </label>
           <input
             type="text"
             name="fieldOfStudy"
+            required="true"
             onChange={this.handleFieldOfStudy}
           ></input>
           <label>Date of Graduation: </label>
           <input
             type="date"
             name="dateOfGraduation"
+            required="true"
             onChange={this.handleDateOfGraduation}
           ></input>
           <input className="btn-submit" type="submit" value="Submit" />
         </form>
         <ul>
-          {this.state.schools.map((index, value) => (
-            <li key={index}>{value}</li>
+          {this.state.schools.map((index) => (
+            <li key={index}>
+              {index.schoolName} - {index.fieldOfStudy} -{" "}
+              {index.dateOfGraduation}
+            </li>
           ))}
         </ul>
       </div>
