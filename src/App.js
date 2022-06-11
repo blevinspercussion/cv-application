@@ -8,19 +8,33 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      generalInfo: {
-        name: "",
-        email: "",
-        phone: "",
-      },
-      educationInfo: {
-        schools: [],
-      },
-      ExperienceInfo: {
-        workExperience: [],
-      },
-    };
+    // this.updateGeneralInfo = this.updateGeneralInfo.bind(this);
+    // this.updateEducationInfo = this.updateEducationInfo.bind(this);
+    // this.updateExperienceInfo = this.updateExperienceInfo.bind(this);
+    // this.setStateOfParent.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
+
+    //   this.state = {
+    //     GeneralInfo: {
+    //       name: "",
+    //       email: "",
+    //       phone: "",
+    //     },
+    //     EducationInfo: {
+    //       schools: [],
+    //     },
+    //     ExperienceInfo: {
+    //       workExperience: [],
+    //     },
+    //   };
+    // }
+
+    // handleChange(event) {
+    //   this.setState({ input: event.target.value });
+    // }
+
+    // setStateOfParent = (newInfo) => {
+    //   this.setState({ name: newInfo });
   }
 
   render() {
@@ -28,7 +42,11 @@ class App extends Component {
       <div className="main-div">
         {/* <h1>CV Maker</h1> */}
         <div className="cv-input">
-          <GeneralInfo />
+          <GeneralInfo
+          // generalInfo={this.state.GeneralInfo}
+          // updateGeneralInfo={this.updateGeneralInfo}
+          // setStateOfParent={this.setStateOfParent}
+          />
           <EducationInfo />
           <ExperienceInfo />
         </div>
