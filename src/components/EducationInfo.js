@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import uniqid from "uniqid";
 import "./component_styles.css";
 
 class EducationInfo extends Component {
@@ -10,6 +11,7 @@ class EducationInfo extends Component {
         schoolName: "",
         fieldOfStudy: "",
         dateOfGraduation: "",
+        id: uniqid(),
       },
 
       schools: [],
@@ -29,6 +31,7 @@ class EducationInfo extends Component {
         schoolName: e.target.value,
         fieldOfStudy: this.state.school.fieldOfStudy,
         dateOfGraduation: this.state.school.dateOfGraduation,
+        id: this.state.school.id,
       },
     });
   };
@@ -39,6 +42,7 @@ class EducationInfo extends Component {
         schoolName: this.state.school.schoolName,
         fieldOfStudy: e.target.value,
         dateOfGraduation: this.state.school.dateOfGraduation,
+        id: this.state.school.id,
       },
     });
   };
@@ -49,6 +53,7 @@ class EducationInfo extends Component {
         schoolName: this.state.school.schoolName,
         fieldOfStudy: this.state.school.fieldOfStudy,
         dateOfGraduation: e.target.value,
+        id: this.state.school.id,
       },
     });
   };
@@ -58,8 +63,16 @@ class EducationInfo extends Component {
   // };
 
   handleSubmit = (e) => {
-    let { school, schools } = this.state;
-    schools.push(school);
+    // let { school, schools } = this.state;
+    this.setState({
+      schools: this.state.schools.concat(this.state.school),
+      school: {
+        schoolName: "",
+        fieldOfStudy: "",
+        dateOfGraduation: "",
+        id: uniqid(),
+      },
+    });
     this.handleSchoolName(e);
     this.handleFieldOfStudy(e);
     this.handleDateOfGraduation(e);
@@ -75,24 +88,24 @@ class EducationInfo extends Component {
           <input
             type="text"
             name="schoolName"
-            required="true"
+            required={true}
             onChange={this.handleSchoolName}
           ></input>
           <label>Field of Study: </label>
           <input
             type="text"
             name="fieldOfStudy"
-            required="true"
+            required={true}
             onChange={this.handleFieldOfStudy}
           ></input>
           <label>Date of Graduation: </label>
           <input
             type="date"
             name="dateOfGraduation"
-            required="true"
+            required={true}
             onChange={this.handleDateOfGraduation}
           ></input>
-          <input className="btn-submit" type="submit" value="Submit" />
+          <input className="btn-submit" type="submit" value="Add School" />
         </form>
         <ul>
           {this.state.schools.map((index) => (
