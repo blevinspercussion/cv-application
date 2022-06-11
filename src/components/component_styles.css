@@ -1,11 +1,12 @@
 .component {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     color: white;
     border: 1px solid black;
     padding: 15px;
     margin: 10px;
-    width: 50vw;
+    width: 60vw;
     border-radius: 10px;
 }
 
@@ -26,7 +27,7 @@ label {
 }
 
 input {
-    max-width: 500px;
+    /* max-width: 500px; */
 }
 
 textarea {
@@ -36,6 +37,7 @@ textarea {
 
 form {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }

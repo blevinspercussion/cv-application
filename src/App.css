@@ -48,10 +48,10 @@ body {
 }
 
 .cv-input {
-  width: 45vh;
+  width: 45vw;
   align-items: flex-start;
 }
 
-.cv-output {
+/* .cv-output {
   width: 45vh;
-}
+} */

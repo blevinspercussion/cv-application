@@ -37,7 +37,7 @@ class GeneralInfo extends Component {
           <input type="email" onChange={this.handleEmail}></input>
           <label>Phone: </label>
           <input type="tel" onChange={this.handlePhone}></input>
-          <input className="btn-submit" type="submit" value="Submit" />
+          {/* <input className="btn-submit" type="submit" value="Submit" /> */}
         </form>
 
         <h2>{this.state.fullName}</h2>
