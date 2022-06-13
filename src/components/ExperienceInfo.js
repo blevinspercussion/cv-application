@@ -4,7 +4,36 @@ import "./component_styles.css";
 class ExperienceInfo extends Component {
   constructor(props) {
     super(props);
+
+    this.handleCompanyNameChange.bind(this);
+    this.handlePositionChange.bind(this);
+    this.handleTasksChange.bind(this);
+    this.handleStartDateChange.bind(this);
+    this.handleEndDateChange.bind(this);
+
+    this.handleSubmit.bind(this);
   }
+
+  handleCompanyNameChange = (e) => {
+    this.props.handleCompanyName(e.target.value);
+  };
+  handlePositionChange = (e) => {
+    this.props.handlePosition(e.target.value);
+  };
+  handleTasksChange = (e) => {
+    this.props.handleTasks(e.target.value);
+  };
+  handleStartDateChange = (e) => {
+    this.props.handleStartDate(e.target.value);
+  };
+  handleEndDateChange = (e) => {
+    this.props.handleEndDate(e.target.value);
+  };
+
+  handleSubmit = (e) => {
+    this.props.handleWorkSubmit();
+    e.preventDefault();
+  };
 
   render() {
     return (
@@ -15,31 +44,31 @@ class ExperienceInfo extends Component {
           <input
             type="text"
             required={true}
-            onChange={this.handleCompanyName}
+            onChange={this.handleCompanyNameChange}
           ></input>
           <label>Position/Title: </label>
           <input
             type="text"
             required={true}
-            onChange={this.handlePosition}
+            onChange={this.handlePositionChange}
           ></input>
           <label>Tasks: </label>
           <textarea
             rows="5"
             required={true}
-            onChange={this.handleTasks}
+            onChange={this.handleTasksChange}
           ></textarea>
           <label>Start Date: </label>
           <input
             type="date"
             required={true}
-            onChange={this.handleStartDate}
+            onChange={this.handleStartDateChange}
           ></input>
           <label>End date: </label>
           <input
             type="date"
             required={true}
-            onChange={this.handleEndDate}
+            onChange={this.handleEndDateChange}
           ></input>
           <input className="btn-submit" type="submit" value="Add Work" />
         </form>

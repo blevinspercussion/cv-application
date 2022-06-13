@@ -109,15 +109,13 @@ class App extends Component {
     this.handleSchoolName(e);
     this.handleFieldOfStudy(e);
     this.handleDateOfGraduation(e);
-    console.log(this.state.school);
-    console.log(this.state.schools);
   };
 
   // Handlers for work info
-  handleCompanyName = (e) => {
+  handleCompanyName = (newCompanyName) => {
     this.setState({
       work: {
-        workName: e.target.value,
+        workName: newCompanyName,
         position: this.state.work.position,
         tasks: this.state.work.tasks,
         startDate: this.state.work.startDate,
@@ -126,11 +124,11 @@ class App extends Component {
     });
   };
 
-  handlePosition = (e) => {
+  handlePosition = (newPosition) => {
     this.setState({
       work: {
         workName: this.state.work.workName,
-        position: e.target.value,
+        position: newPosition,
         tasks: this.state.work.tasks,
         startDate: this.state.work.startDate,
         endDate: this.state.work.endDate,
@@ -138,38 +136,38 @@ class App extends Component {
     });
   };
 
-  handleTasks = (e) => {
+  handleTasks = (newTasks) => {
     this.setState({
       work: {
         workName: this.state.work.workName,
         position: this.state.work.position,
-        tasks: e.target.value,
+        tasks: newTasks,
         startDate: this.state.work.startDate,
         endDate: this.state.work.endDate,
       },
     });
   };
 
-  handleStartDate = (e) => {
+  handleStartDate = (newStartDate) => {
     this.setState({
       work: {
         workName: this.state.work.workName,
         position: this.state.work.position,
         tasks: this.state.work.tasks,
-        startDate: e.target.value,
+        startDate: newStartDate,
         endDate: this.state.work.endDate,
       },
     });
   };
 
-  handleEndDate = (e) => {
+  handleEndDate = (newEndDate) => {
     this.setState({
       work: {
         workName: this.state.work.workName,
         position: this.state.work.position,
         tasks: this.state.work.tasks,
         startDate: this.state.work.startDate,
-        endDate: e.target.value,
+        endDate: newEndDate,
       },
     });
   };
@@ -190,7 +188,6 @@ class App extends Component {
     this.handleTasks(e);
     this.handleStartDate(e);
     this.handleEndDate(e);
-    e.preventDefault();
   };
 
   render() {
