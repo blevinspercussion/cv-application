@@ -6,17 +6,25 @@ class GeneralInfo extends Component {
     super(props);
 
     this.handleNameChange.bind(this);
+    this.handleEmailChange.bind(this);
+    this.handlePhoneChange.bind(this);
   }
 
   handleNameChange = (e) => {
     this.props.handleName(e.target.value);
+  };
+  handleEmailChange = (e) => {
+    this.props.handleEmail(e.target.value);
+  };
+  handlePhoneChange = (e) => {
+    this.props.handlePhone(e.target.value);
   };
 
   render() {
     return (
       <div className="component general-info">
         <h2>Contact Information</h2>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>Name: </label>
           <input
             type="text"
@@ -27,15 +35,15 @@ class GeneralInfo extends Component {
           <input
             type="email"
             name="email"
-            onChange={this.props.handleEmail}
+            onChange={this.handleEmailChange}
           ></input>
           <label>Phone: </label>
           <input
             type="tel"
             name="phone"
-            onChange={this.props.handlePhone}
+            onChange={this.handlePhoneChange}
           ></input>
-          {/* <input className="btn-submit" type="submit" value="Submit" /> */}
+          <input className="btn-submit" type="submit" value="Submit" />
         </form>
 
         <h2>{this.props.fullName}</h2>

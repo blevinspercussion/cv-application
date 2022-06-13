@@ -52,13 +52,13 @@ class App extends Component {
   // Handlers for general info
   handleName = (name) => {
     this.setState({ fullName: name });
-    console.log(this.fullName);
+    console.log(this.state.fullName);
   };
-  handleEmail = (e) => {
-    this.setState({ email: e.target.value });
+  handleEmail = (newEmail) => {
+    this.setState({ email: newEmail });
   };
-  handlePhone = (e) => {
-    this.setState({ phone: e.target.value });
+  handlePhone = (newPhone) => {
+    this.setState({ phone: newPhone });
   };
 
   // Handlers for school info
@@ -198,9 +198,9 @@ class App extends Component {
         {/* <h1>CV Maker</h1> */}
         <div className="cv-input">
           <GeneralInfo
-            fullName={this.fullName}
-            email={this.email}
-            phone={this.phone}
+            fullName={this.state.fullName}
+            email={this.state.email}
+            phone={this.state.phone}
             handleName={this.handleName}
             handleEmail={this.handleEmail}
             handlePhone={this.handlePhone}
