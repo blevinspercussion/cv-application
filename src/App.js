@@ -62,10 +62,10 @@ class App extends Component {
   };
 
   // Handlers for school info
-  handleSchoolName = (e) => {
+  handleSchoolName = (newSchoolName) => {
     this.setState({
       school: {
-        schoolName: e.target.value,
+        schoolName: newSchoolName,
         fieldOfStudy: this.state.school.fieldOfStudy,
         dateOfGraduation: this.state.school.dateOfGraduation,
         id: this.state.school.id,
@@ -73,23 +73,23 @@ class App extends Component {
     });
   };
 
-  handleFieldOfStudy = (e) => {
+  handleFieldOfStudy = (newFieldOfStudy) => {
     this.setState({
       school: {
         schoolName: this.state.school.schoolName,
-        fieldOfStudy: e.target.value,
+        fieldOfStudy: newFieldOfStudy,
         dateOfGraduation: this.state.school.dateOfGraduation,
         id: this.state.school.id,
       },
     });
   };
 
-  handleDateOfGraduation = (e) => {
+  handleDateOfGraduation = (newDateOfGraduation) => {
     this.setState({
       school: {
         schoolName: this.state.school.schoolName,
         fieldOfStudy: this.state.school.fieldOfStudy,
-        dateOfGraduation: e.target.value,
+        dateOfGraduation: newDateOfGraduation,
         id: this.state.school.id,
       },
     });
@@ -109,7 +109,8 @@ class App extends Component {
     this.handleSchoolName(e);
     this.handleFieldOfStudy(e);
     this.handleDateOfGraduation(e);
-    e.preventDefault();
+    console.log(this.state.school);
+    console.log(this.state.schools);
   };
 
   // Handlers for work info
