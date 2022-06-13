@@ -206,16 +206,16 @@ class App extends Component {
             handlePhone={this.handlePhone}
           />
           <EducationInfo
-            school={this.school}
-            schools={this.schools}
+            school={this.state.school}
+            schools={this.state.schools}
             handleSchoolName={this.handleSchoolName}
             handleFieldOfStudy={this.handleFieldOfStudy}
             handleDateOfGraduation={this.handleDateOfGraduation}
             handleSchoolSubmit={this.handleSchoolSubmit}
           />
           <ExperienceInfo
-            work={this.work}
-            works={this.works}
+            work={this.state.work}
+            works={this.state.works}
             handleCompanyName={this.handleCompanyName}
             handlePosition={this.handlePosition}
             handleTasks={this.handleTasks}
