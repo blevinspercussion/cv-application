@@ -84,6 +84,11 @@ class ExperienceInfo extends Component {
               Start Date: {index.startDate}
               <br />
               End Date: {index.endDate}
+              <div>
+                <p onClick={() => this.props.deleteWork(index.workName)}>
+                  (delete)
+                </p>
+              </div>
               <br />
               <br />
             </li>

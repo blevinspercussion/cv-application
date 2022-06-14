@@ -113,9 +113,6 @@ class App extends Component {
   };
 
   deleteSchool = (schoolName) => {
-    console.log("clicked");
-    console.log(schoolName);
-    console.log(this.state.schools);
     this.setState({
       schools: this.state.schools.filter(
         (school) => school.schoolName !== schoolName
@@ -202,7 +199,11 @@ class App extends Component {
     this.handleEndDate(e);
   };
 
-  handleDeleteWork = (workToDelete) => {};
+  deleteWork = (workName) => {
+    this.setState({
+      works: this.state.works.filter((work) => work.workName !== workName),
+    });
+  };
 
   render() {
     return (
@@ -235,6 +236,7 @@ class App extends Component {
             handleStartDate={this.handleStartDate}
             handleEndDate={this.handleEndDate}
             handleWorkSubmit={this.handleWorkSubmit}
+            deleteWork={this.deleteWork}
           />
         </div>
         <div className="resume">
