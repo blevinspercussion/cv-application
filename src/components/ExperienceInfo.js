@@ -84,6 +84,8 @@ class ExperienceInfo extends Component {
               Start Date: {index.startDate}
               <br />
               End Date: {index.endDate}
+              <br />
+              <br />
             </li>
           ))}
         </ul>

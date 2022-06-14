@@ -4,6 +4,7 @@ import "./App.css";
 import EducationInfo from "./components/EducationInfo";
 import ExperienceInfo from "./components/ExperienceInfo";
 import GeneralInfo from "./components/GeneralInfo";
+import Resume from "./components/Resume";
 
 class App extends Component {
   constructor(props) {
@@ -222,7 +223,15 @@ class App extends Component {
             handleWorkSubmit={this.handleWorkSubmit}
           />
         </div>
-        <div className="cv-output"></div>
+        <div className="resume">
+          <Resume
+            fullName={this.state.fullName}
+            email={this.state.email}
+            phone={this.state.phone}
+            schools={this.state.schools}
+            works={this.state.works}
+          />
+        </div>
       </div>
     );
   }
