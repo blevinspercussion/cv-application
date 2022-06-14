@@ -32,6 +32,7 @@ class ExperienceInfo extends Component {
 
   handleSubmit = (e) => {
     this.props.handleWorkSubmit();
+    document.getElementById("exp-form").reset();
     e.preventDefault();
   };
 
@@ -39,7 +40,7 @@ class ExperienceInfo extends Component {
     return (
       <div className="component experience-info">
         <h2>Experience</h2>
-        <form onSubmit={this.handleSubmit}>
+        <form id="exp-form" onSubmit={this.handleSubmit}>
           <label>Company Name: </label>
           <input
             type="text"

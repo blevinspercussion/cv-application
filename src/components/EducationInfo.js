@@ -24,6 +24,7 @@ class EducationInfo extends Component {
 
   handleSubmit = (e) => {
     this.props.handleSchoolSubmit();
+    document.getElementById("ed-form").reset();
     e.preventDefault();
   };
 
@@ -35,7 +36,7 @@ class EducationInfo extends Component {
     return (
       <div className="component education-info">
         <h2>Education</h2>
-        <form onSubmit={this.handleSubmit}>
+        <form id="ed-form" onSubmit={this.handleSubmit}>
           <label>School Name: </label>
           <input
             type="text"
