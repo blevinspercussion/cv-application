@@ -112,6 +112,17 @@ class App extends Component {
     this.handleDateOfGraduation(e);
   };
 
+  deleteSchool = (schoolName) => {
+    console.log("clicked");
+    console.log(schoolName);
+    console.log(this.state.schools);
+    this.setState({
+      schools: this.state.schools.filter(
+        (school) => school.schoolName !== schoolName
+      ),
+    });
+  };
+
   // Handlers for work info
   handleCompanyName = (newCompanyName) => {
     this.setState({
@@ -191,6 +202,8 @@ class App extends Component {
     this.handleEndDate(e);
   };
 
+  handleDeleteWork = (workToDelete) => {};
+
   render() {
     return (
       <div className="main-div">
@@ -211,6 +224,7 @@ class App extends Component {
             handleFieldOfStudy={this.handleFieldOfStudy}
             handleDateOfGraduation={this.handleDateOfGraduation}
             handleSchoolSubmit={this.handleSchoolSubmit}
+            deleteSchool={this.deleteSchool}
           />
           <ExperienceInfo
             work={this.state.work}

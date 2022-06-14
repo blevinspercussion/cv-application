@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import uniqid from "uniqid";
+// import uniqid from "uniqid";
 import "./component_styles.css";
 
 class EducationInfo extends Component {
@@ -61,9 +61,14 @@ class EducationInfo extends Component {
         </form>
         <ul>
           {this.props.schools?.map((index) => (
-            <li key={index}>
+            <li key={index.id} value={index.schoolName}>
               {index.schoolName} - {index.fieldOfStudy} -{" "}
               {index.dateOfGraduation}
+              <div>
+                <p onClick={() => this.props.deleteSchool(index.schoolName)}>
+                  (delete)
+                </p>
+              </div>
             </li>
           ))}
         </ul>
